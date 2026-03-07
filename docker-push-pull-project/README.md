@@ -3,6 +3,7 @@
 
 # 2. Install express
     npm install express
+    npm ci
 
 
 # 3. test locally
@@ -13,7 +14,7 @@
 
 # 5. build Docker image (locally)
 ### tag name: bongodev/hello-docker:latest
-    docker build -t YOUR_DOCKERHUB_ID/hello-docker:latest .
+    docker build -t YOUR_DOCKERHUB_ID/push-pull:latest .
 
 # 6. Chec your image
     docker images
@@ -23,7 +24,7 @@
 
 
 # 7. push to Docker Hub
-    docker push YOUR_DOCKERHUB_ID/hello-docker:latest
+    docker push YOUR_DOCKERHUB_ID/push-pull:latest
 
 
 # 8. run the pushed image locally (verify)
@@ -31,7 +32,7 @@
 ###  When you run the container: docker run -p 3000:8080 my-node-app, So the mapping means: "Hey Docker, if someone connects to my computer’s port 3000, please forward that traffic to port 8080 inside the container."
 ###  The host is your actual machine - your laptop, desktop, or cloud VM where Docker Engine is installed. A network port on your host OS - e.g., macOS, Windows, or Linux.
 
-    docker run --rm -p 3000:8080 YOUR_DOCKERHUB_ID/hello-docker:latest
+    docker run --rm -p 3000:8080 YOUR_DOCKERHUB_ID/push-pull:latest
 ### open http://localhost:8080 or <ec2-machine-ip>:8080
 
 # Check your running containers:
