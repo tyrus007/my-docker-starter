@@ -1,16 +1,8 @@
 # How to run app with Docker-compose
 
-## Install docker compose latest version
-    DOCKER_COMPOSE_VERSION=$(curl -s https://api.github.com/repos/docker/compose/releases/latest | grep tag_name | cut -d '"' -f 4)
-
-    sudo curl -L "https://github.com/docker/compose/releases/download/$DOCKER_COMPOSE_VERSION/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-
-* $(uname -s) → OS (Linux/macOS)
-
-* $(uname -m) → Architecture (x86_64/arm64)
-
-## Make it executable
-sudo chmod +x /usr/local/bin/docker-compose
+## Install docker compose version (v2)
+    sudo apt update
+    sudo apt install docker-compose-plugin -y
 
 ## Verify installation
 
