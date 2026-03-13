@@ -29,7 +29,7 @@
 
 ### Change some application file and push to gitHub, the gitHub action will trigger
 
-This note was updated to trigger the GitHub Actions workflow from a small change in `action-cicd`.
+This note was updated to trigger the GitHub Actions workflow from a small change in the `docker-starter` project root.
 
 ### Hit <EC2_machine_ip>:5000 on the browser
 
