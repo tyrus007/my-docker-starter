@@ -1,6 +1,6 @@
-<table class="w-full border-collapse border border-white/30 backdrop-blur-md bg-white/20 rounded-lg text-white">
+<table class="w-full border-collapse border border-cyan-100/20 backdrop-blur-md bg-slate-950/25 rounded-lg text-cyan-50">
     <thead>
-        <tr class="bg-white/30">
+        <tr class="bg-cyan-500/20">
             <th class="border p-2">Student Name</th>
             <th class="border p-2">Date</th>
             <th class="border p-2">Status</th>
@@ -12,13 +12,13 @@
         <tr>
             <td class="border p-2">{{ record.name }}</td>
             <td class="border p-2">{{ record.date }}</td>
-            <td class="border p-2 {% if record.status == 'Absent' %} text-red-400 {% else %} text-blue-600 {% endif %}">
+            <td class="border p-2 {% if record.status == 'Absent' %} text-amber-300 {% else %} text-emerald-300 {% endif %}">
                 {{ record.status }}
             </td>
             <td class="border p-2">
                 {% if record.status == "Present" %}
                     <button onclick="markAbsent('{{ record.student_id }}')" 
-                            class="bg-red-500/50 text-white px-4 py-2 rounded-lg hover:bg-red-800/50">
+                            class="bg-amber-500/45 text-slate-950 px-4 py-2 rounded-lg hover:bg-amber-400/55">
                         Mark Absent
                     </button>
                 {% endif %}
